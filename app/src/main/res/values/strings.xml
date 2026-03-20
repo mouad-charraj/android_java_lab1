@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ma Petite App</string>
+    <string name="valeur_depart">0</string>
+    <string name="btn_salutation">Dire Bonjour</string>
+    <string name="btn_ajouter">Compter</string>
+    <string name="message_toast">Bonjour ! Le score est : </string>
+</resources>
