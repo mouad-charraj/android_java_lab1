@@ -6,36 +6,36 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Application de compteur simple
+ * Réalisé par : Mouad Charraj aka Z3R0-XR7
+ */
 public class MainActivity extends AppCompatActivity {
 
-    // Variable pour mémoriser le nombre de clics
-    private int score = 0;
+    // Variable pour mémoriser le nombre de clics (le score)
+    private int scoreActuel = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // On affiche l'interface définie dans activity_main.xml
+        // Liaison avec le fichier de design (activity_main.xml)
         setContentView(R.layout.activity_main);
 
-        // On récupère les éléments de l'interface par leur ID
-        TextView affichageScore = findViewById(R.id.tv_score);
-        Button boutonBonjour = findViewById(R.id.btn_hello);
-        Button boutonAjouter = findViewById(R.id.btn_plus);
+        // Récupération des éléments visuels par leurs IDs personnalisés
+        TextView affichageScore = findViewById(R.id.affichage_chiffre_mouad);
+        Button btnSalutations = findViewById(R.id.btn_dire_salut_mouad);
+        Button btnCompteur = findViewById(R.id.btn_incrementeur_mouad);
 
-        // Action quand on clique sur le bouton "Dire Bonjour"
-        boutonBonjour.setOnClickListener(v -> {
-            // On prépare un message avec le score actuel
-            String message = getString(R.string.message_toast) + score;
-            // On l'affiche à l'écran
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        // Action du bouton Salutations : Affiche un Toast avec le score
+        btnSalutations.setOnClickListener(v -> {
+            String texteAffiche = getString(R.string.message_toast) + scoreActuel;
+            Toast.makeText(this, texteAffiche, Toast.LENGTH_SHORT).show();
         });
 
-        // Action quand on clique sur le bouton "Compter"
-        boutonAjouter.setOnClickListener(v -> {
-            // On augmente le score de 1
-            score = score + 1;
-            // On met à jour le texte affiché
-            affichageScore.setText(String.valueOf(score));
+        // Action du bouton Compteur : Augmente le score et met à jour l'affichage
+        btnCompteur.setOnClickListener(v -> {
+            scoreActuel++; // On ajoute 1 au score
+            affichageScore.setText(String.valueOf(scoreActuel));
         });
     }
 }
