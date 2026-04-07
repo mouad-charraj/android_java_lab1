@@ -3,6 +3,7 @@
 ## Description
 Ce projet est le premier laboratoire pratique du module de développement mobile Android. Il s'agit d'une application d'initiation permettant de manipuler les composants de base (Widgets), de gérer les événements de clic et de comprendre l'interaction entre le code Java et l'interface XML.
 
+## Screenshot
 <img width="447" height="740" alt="image" src="https://github.com/user-attachments/assets/1f97cde1-ca90-477f-b9fb-6580b362ff23" />
 
 
